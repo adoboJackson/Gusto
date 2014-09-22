@@ -1,0 +1,112 @@
+$light-gray: #a6a0cf;
+$text-color: #a6a0cf;
+$link-color: #333;
+$font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+body, html{
+	height: 100%;
+	color: $text-color;
+	font-family: $font;
+	font-weight: 300;
+}
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+img{
+	border: none;
+}
+
+h1{
+	margin-left: -1000px;
+	position: absolute;
+	width: auto;
+	border: 1px solid red;
+}
+a{
+	text-decoration: none;
+	color: $link-color;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+p{
+	margin-bottom: 1.35em;
+	font-size: 1.25em;
+	 line-height: 1.35em;
+}
+.main-container{
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1024px;
+	height: 100%;
+}
+.main-img{
+	width: 100%;
+	img{
+		width: 100%;
+	}
+}
+.text-container{
+	width: 60%;
+	margin: 0 auto;
+	position: relative;
+}
+.text-block{
+	float: right;
+	width: 60%;
+	display: block;
+	padding-top: 12%;
+}
+.logo{
+	float: right;
+	width: 30%;
+	position: relative;
+	img{
+		width: 100%;
+		max-width: 200px;
+		display: block;
+		position: absolute;
+		right: -10%;
+
+	}
+}
+.founder-name{
+	text-transform: uppercase;
+	font-size: .85em;
+}
+footer{
+	display: block;
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+	background: lighten($light-gray, 20%);
+}
